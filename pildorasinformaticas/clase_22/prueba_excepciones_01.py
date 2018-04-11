@@ -42,3 +42,5 @@ else:
     print("Operación no contemplada")
 
 print("Operación ejecutada. Continuación de ejecúción del programa ")
+
+
