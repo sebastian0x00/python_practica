@@ -1,8 +1,8 @@
 def suma(num1, num2):
     print(num1 + num2)
 
-suma()
+suma(12,4)
 
-suma()
+suma(72,3)
 
-suma()
+suma(6,59)
