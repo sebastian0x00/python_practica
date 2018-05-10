@@ -8,7 +8,7 @@ def onSpawn (event):
             pet.fetch(item)
 
 # Assign onSpawn function for the pet's "spawn".
-
+pet.on("spawn", onSpawn)
 
 while True:
     # Guard the left passage: 
