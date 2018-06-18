@@ -11,3 +11,7 @@ setup(
 	packages=["calculos","calculos.redondeo_potencia"]
 	
 	)
+
+#desde una ventana de DOS, donde está el archivo python.py 
+#python setup.py sdist
+#pip3 install paquetescalculos-1.0.tar.gz
