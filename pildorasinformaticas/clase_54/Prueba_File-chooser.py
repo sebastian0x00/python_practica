@@ -11,7 +11,7 @@ def abreFichero():
 
 	print(fichero)
 
-Button(root, text = "Abrir fichero", command = abreFichero).pack
+Button(root, text = "Abrir fichero", command = abreFichero).pack()
 
 
 root.mainloop()
