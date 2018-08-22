@@ -14,7 +14,7 @@ miCursor.execute('''
 	SECCION VARCHAR(20))
 
 ''')
-
+  
 productos =[
 	
 	("pelota", 20, "juguetería"),
