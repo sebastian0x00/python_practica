@@ -4,19 +4,20 @@ import sqlite3
 
 #----------funciones ----------------------
 
+
 def conexionBBDD():
 
 	miConexion = sqlite3.connect("Usuarios")
 	miCursor = miConexion.cursor()
-
 	try:
+
 		miCursor.execute('''
 			CREATE TABLE DATOSUSUARIOS (
 			ID INTEGER PRIMARY KEY AUTOINCREMENT,
 			NOMBRE_USUARIO VARCHAR(50),
 			PASSWORD VARCHAR(50),
 			APELLIDO VARCHAR(10),
-			DIRRECION VARCHAR(50)
+			DIRRECION VARCHAR(50),
 			COMENTARIOS VARCHAR(100))
 			''')
 
@@ -24,18 +25,18 @@ def conexionBBDD():
 
 	except:
 
-		messagebox.showwarning("¡Atención!", "La BBDD ya existe")
-
+		messagebox.showwarning("¡Atención", "La BBDD ya existe")
 
 def salirAplicacion():
 
-	valor = messagebox.askquestion("Salir", "¿Deseas salir de la aplicacion?")
+	valor = messagebox.askquestion("Salir", "¿Desea salir de la aplicación?")
 
-	if valor == "yes":
+	if valor =="yes":
 		root.destroy()
 
 
 def limpiarCampos():
+
 	miNombre.set("")
 	miId.set("")
 	miApellido.set("")
@@ -78,8 +79,9 @@ miFrame.pack()
 miId = StringVar()
 miNombre = StringVar()
 miApellido = StringVar()
-miPass = StringVar()
+miPass =StringVar()
 miDirrecion = StringVar()
+
 
 
 cuadroID = Entry(miFrame, textvariable = miId)
@@ -133,7 +135,6 @@ comentariosLabel.grid(row = 5, column = 0, sticky = "e", padx = 10, pady = 10)
 
 miFrame2 = Frame(root)
 miFrame2.pack()
-
 
 botonCrear = Button(miFrame2, text = "Create")
 botonCrear.grid(row = 1, column = 0, sticky = "e", padx = 10, pady = 10)
