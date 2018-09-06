@@ -2,23 +2,22 @@ from tkinter import *
 from tkinter import messagebox
 import sqlite3
 
-root = Tk()
-
 #----------funciones ----------------------
+
 
 def conexionBBDD():
 
 	miConexion = sqlite3.connect("Usuarios")
 	miCursor = miConexion.cursor()
-
 	try:
+
 		miCursor.execute('''
 			CREATE TABLE DATOSUSUARIOS (
 			ID INTEGER PRIMARY KEY AUTOINCREMENT,
 			NOMBRE_USUARIO VARCHAR(50),
 			PASSWORD VARCHAR(50),
 			APELLIDO VARCHAR(10),
-			DIRRECION VARCHAR(50)
+			DIRRECION VARCHAR(50),
 			COMENTARIOS VARCHAR(100))
 			''')
 
@@ -26,8 +25,9 @@ def conexionBBDD():
 
 	except:
 
-		messagebox.showwarning("¡Atención!", "La BBDD ya existe")
+		messagebox.showwarning("¡Atención", "La BBDD ya existe")
 
+root = Tk()
 
 barraMenu = Menu(root)
 root.config(menu = barraMenu, width = 300, height = 300)
